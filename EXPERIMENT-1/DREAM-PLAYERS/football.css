@@ -1,0 +1,17 @@
+table{
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+    margin: 10px auto ;
+    border: 2px solid black;
+}
+
+th,td{
+    border: 2px solid #000;
+    text-align: center;
+    padding: 15px;
+}
+
+#cr7{
+    
+}
