@@ -78,8 +78,7 @@ johan();
 
 //========================HIGHER ORDER FUNCTION==============================================
 
-//wo function jo return kre functoin ya return kare function y afir accept kare
-//ek function apne parameter Mein..
+//wo function jo return kre functoin ,, ya fir accept kare ek function apne parameter Mein..
 
 
 //1st way
