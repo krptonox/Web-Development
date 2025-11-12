@@ -1,0 +1,23 @@
+:root {
+    --netflix-red:#e50914;
+    --netflix-red-dark:#b20710;
+    --dark-bg:#0d0d0d;
+    --card-bg:#1a1a1a;
+    --text-primary:#f0f0f0;
+    --text-secondary:#b3b3b3;
+    --glass-bg:rgba(20,20,20,0.85);
+    --transition: all 0.3s ease;
+    --gold:#e6c200;
+    --button-gradient:Linear-gradient(90deg, #e50914, #e62128,#e50914 );
+    --glass-overlay:rgba(20,20,20,0.6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--dark-bg);
+}
