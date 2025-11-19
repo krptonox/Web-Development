@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        display:flex;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background: linear-gradient(90deg,rgb(40, 40, 54),rgb(44, 50, 71));
+    }
+
+    .task-box {
+        width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px 1px black;
+    }
+
+    h2 {
+        font-family: Segoe UI;
+        font-weight: 500;
+        color:rgb(44, 50, 71);
+    }
+
+    input {
+        width: 95%;
+        height: 4%;
+        padding: 2%;
+        margin-bottom: 4%;
+        border-radius: 8px;
+        border-style: groove;
+        font-family: Segoe UI;
+        font-weight: 400;
+        color: black;
+    }
+
+    #addBtn {
+        padding: 2%;
+        border-radius: 6px;
+        border-style: none;
+        box-shadow: 0 0 5px 1px black;
+        background: rgba(55, 75, 145, 0.885);
+        color: white;
+        transition: all 0.3s ease;
+    }
+    #addBtn:hover {
+        background: rgb(44, 50, 71);
+        cursor: pointer;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        padding: 5%;
+        width: 88%;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 6px;
+        gap: 10px;
+    }
+
+    li {
+        font-family: Segoe UI;
+        font-weight: 300;
+        background: rgba(11, 34, 180, 0.2);
+        width: 97%;
+        border-radius: 6px;
+        padding: 10px;
+        list-style: none;
+    }
+
+    li button {
+        float: right;
+        background-color: rgba(255, 0, 0, 0.633);
+        color: white;
+        font-family: Segoe UI;
+        font-weight: 400;
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: 0 0 5px 1px black;
+        padding: 2%;
+        transition: all 0.3s ease;
+    }
+    
+    li button:hover {
+        background: rgb(250, 8, 8);
+        box-shadow: 0 0 8px 2px black;
+    }
+
+</style>
+<body>
+    <div class="task-box">
+        <h2> TO DO APP</h2>
+        <input placeholder="ENTER YOUR TASK"/>
+        <button class="button" id="addBtn">ADD TASK</button>
+        <ul>
+            <li>KILL <button class="delete">ABORT</button></li>
+            <li>HUNT <button class="delete">ABORT</button></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
