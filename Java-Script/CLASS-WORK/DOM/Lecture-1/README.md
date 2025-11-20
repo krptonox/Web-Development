@@ -1,6 +1,6 @@
 # DOM(Documnet Object Model)
 
- It is a priogramming Interface which deals with HTML Structure of a webpage as a tree objects
+ It is a programming Interface which deals with HTML Structure of a webpage as a tree objects
 
  It allows  jAVA SCRIPT to interact with ,manupilate  and change the structure of html structure in a TREE STRUCTURE..
 

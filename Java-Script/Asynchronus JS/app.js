@@ -39,7 +39,7 @@ p.then((value) => {                           //<----------- CONSUMING A PROMISE
 });
 
 
-//========================================USE OF Pomise In CREATING A Functio============
+//========================================USE OF Pomise In CREATING A Function============
 function wait(ms){
     return new Promise((resolve) =>{
                 setTimeout(()=>{
