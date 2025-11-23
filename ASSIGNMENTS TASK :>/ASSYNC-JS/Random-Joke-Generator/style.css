@@ -1,0 +1,36 @@
+  body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .box {
+        width: 450px;
+        background: white;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    #setup, #punchline {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        border: none;
+        background: #007bff;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background: gray;
+        cursor: not-allowed;
+    }
