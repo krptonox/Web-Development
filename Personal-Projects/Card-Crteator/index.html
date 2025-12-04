@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+          #frm{
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            margin-top: 30px;
+            margin: 30px auto; 
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background: linear-gradient(to right,rgb(69, 67, 67), rgba(132, 138, 132, 0.145));
+            box-shadow: 2px 2px 15px rgba(174, 163, 163, 0.822);
+        }
+        
+        #frm:hover{
+            box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.822);
+        }
+
+       #frm input{
+              
+              margin:20px auto;
+              border-radius: 5px;
+              padding-left: 20px;
+              height: 30px;
+              margin-left:20px;
+              background: linear-gradient(to left, rgba(151, 162, 156, 0.86), rgba(136, 225, 174, 0.86));
+              color: white;
+        }
+        #frm input[type="submit"]{
+            padding-right: 20px;
+        }
+
+        .card{
+            color:white;
+            background: linear-gradient(to right,rgb(106, 37, 37),rgba(37, 38, 39, 0.407));
+            margin:30px auto;
+            margin-top:50px;
+            height:550px;
+            width:290px;
+            border:1px solid white;
+            border-radius: 10px;
+            box-shadow:6px 6px 20px  rgb(176, 50, 50);
+            transition:0.5s ease;
+            padding-bottom: 20px;  
+            height:auto;   
+        }
+
+        .data{
+            margin-left:30px;
+        }
+
+        .data h2{
+            font-size: 30px;;
+        }
+
+        .profile{
+            height:280px;
+            width:230px;
+            margin:30px auto;
+            background-color: white;
+        }
+        .profile img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+        }
+
+        .card:hover{
+            border:1px solid rgb(255, 255, 255);
+            box-shadow:8px 8px 26px rgb(144, 50, 176);
+            background: linear-gradient(to right,rgb(76, 68, 106),rgba(37, 38, 39, 0.407));
+
+        }
+
+        #main{
+            display:flex;
+            align-self: center;
+            justify-content: space-between;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div id="frm">
+    <form action="">
+        <input type="text" placeholder="name">
+        <input type="text" placeholder="Occupation">
+        <input type="text" placeholder="info">
+        <input type="text" placeholder="profile pic">
+        <input type="submit">
+    </form>
+    </div>
+
+    <div id="main"></div>
+
+
+      <!-- Rough Structre that how my cards System is going to look -->
+       
+    <!-- <div class="card">
+          <div class="profile">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCGZNSRq1srspTOUwelCMzYnZYk9_xd2E7TA&s">
+          </div>
+          <div class="data">
+          <h2>Aryan</h2>
+          <h3>Web Developer</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+          </div>
+    </div> -->
+
+    <script>
+        let form = document.querySelector("form");
+        let input = document.querySelectorAll("input");
+        let main = document.querySelector("#main");
+
+        form.addEventListener("submit",function(dets){
+            dets.preventDefault();
+
+            // for(let i=0;i<inpt.length;i++){
+            //     console.log(inpt[i].value);
+            // }
+            
+            let card = document.createElement("div");
+            card.classList.add("card");
+
+            let profile = document.createElement("div");
+            profile.classList.add("profile");
+
+            let data = document.createElement("div");
+            data.classList.add("data");
+
+            let img = document.createElement("img");
+            img.setAttribute("src",input[3].value);
+
+
+
+            let h2 = document.createElement("h2");
+            h2.innerText = input[0].value;
+
+
+            let h3 = document.createElement("h3");
+            h3.innerText = input[1].value;
+
+            let p = document.createElement("p");
+            p.innerText = input[2].value;
+
+
+            profile.appendChild(img);
+            data.appendChild(h2);
+            data.appendChild(h3);
+            data.appendChild(p);
+
+
+            //Insertion part
+            card.appendChild(profile);
+            card.appendChild(data);
+
+            main.appendChild(card);
+            console.log(card);
+
+            input.forEach(function(inp){
+                if(inp.type!=="submit"){
+                   inp.value = "";
+                }
+            })
+        });
+    </script>
+</body>
+</html>
