@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-4</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color:white;
+        margin:0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main{
+        padding: 20px;
+        border: 2px solid white;
+        box-shadow:2px 2px 4px 2px white;
+        height:600px;
+        width:300px;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        flex-direction: column;
+        gap:15px;
+    }
+    h2{
+        margin-left: 29px;;
+    }
+    #input{
+        font-size: 20px;
+        padding: 10px;
+        border: 2px solid white;
+        box-shadow: 1px 1px 3px 1px white;
+    }
+    #button{
+        font-size: large;
+        font-weight: 900;
+        margin-top: 30px;
+        padding: 10px;
+        margin-left: 20%;
+        box-shadow: 2px 2px 4px 2px orange;
+        background-color: green;
+    }
+    #result{
+        margin-left: 15px;
+        font-size: 20px;
+        text-shadow: 0 0 4px  white;
+    }
+</style>
+<body>
+    <div class="main">
+        <h2>try and guess random number between 1 and 100 you have 10 attempts to guess the right number</h2>
+        <h1>Guess a Number</h1>
+        <div id="result"></div>
+        <form>
+            <input type="text" id="input">
+            <br>
+            <button type="submit" id="button">Submit Guess</button>
+        </form>
+        <h2 id="pvg">Previous Guess: 0</h2>
+        <h2 id="rvg">Remaning Guess: 10</h2>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+const pvguess = document.querySelector('#pvg');
+const remguess = document.querySelector('#rvg');
+const result = document.querySelector('#result');
+   
+// console.log(input)
+
+const randomNumber = Math.round(Math.random()*100 +1)
+console.log(randomNumber)
+
+let count = 10;
+
+form.addEventListener('submit',(eve)=>{
+    eve.preventDefault();
+    
+    const input = parseInt(document.querySelector('#input').value);
+
+    
+     if(input === randomNumber){
+             result.innerHTML=`You guessed correct ${randomNumber}`
+             console.log("guessed Correct")
+             form.querySelector('#button').disabled = true;
+        }
+        else if(input!=randomNumber){
+             count--;
+             pvguess.innerHTML=`Previous Guess: ${input}`
+             remguess.innerHTML=`Remaning Guess: ${count}`
+             console.log(`you guessed wrong ${input}`)
+             console.log(`Remaning guesses are ${count}`)
+
+             if(count===0){
+                result.innerHTML=`Game over Mother Fucker Correct Answer was ${randomNumber}... <b>Now FUCK OFF!!!!<b>`;
+                form.querySelector('#button').disabled = true;
+             }
+        }
+   })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-1</title>
+</head>
+<style>
+    body {
+        margin:0;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:black;
+        color:white;
+        }
+    
+    .canvas{
+        height:auto;
+        width:auto;
+        border:2px solid rgb(255, 254, 254);
+        box-shadow: 2px 2px 10px currentColor;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+
+    }
+    .button{
+        height:100px;
+        width:100px;
+        display:inline-block;
+        cursor:pointer;
+        margin-left: 20px;
+    }
+    #grey{
+        background-color: grey;
+        box-shadow: 2px 2px 15px currentColor;
+    }
+    #white{
+        background-color: white;
+        box-shadow: 2px 2px 15px currentColor;
+    }
+    #blue{
+        background-color: blue;
+        box-shadow: 2px 2px 15px currentColor;
+    }
+    #yellow{
+        background-color: yellow;
+        box-shadow: 2px 2px 15px  currentColor;
+    }
+    h2{
+        margin-left: 10%;
+        text-shadow:  0px 0px 15px currentColor;
+    }
+</style>
+<body>
+    <div class="canvas">
+    <h1>Color Scheme Switcher</h1>
+    <div class="inbox">
+    <span class="button" id="grey"></span>
+    <span class="button" id="white"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+    </div>
+    <h2>
+        Try cliciking on one of the colors above
+        <span>To change th background color of this page!</span>
+    </h2>
+    </div>
+    <script>
+        const body = document.querySelector('body');
+const span = document.querySelectorAll('.button');
+const spanArray = Array.from(span);
+const canvas = document.querySelector('.canvas')
+
+
+const bigB = spanArray.map((btn)=>{
+// console.log(btn.id)
+btn.addEventListener('click',(eve)=>{
+    const clr = eve.target.id;
+    if(clr){
+       body.style.backgroundColor = eve.target.id;
+       canvas.style.backgroundColor = "black";
+    }
+   //  switch(clr){
+   //       case "grey":
+   //          canvas.style.backgroundColor = "black";
+   //          break;
+   //       case "white":
+   //          body.style.backgroundColor = "white";
+   //          canvas.style.backgroundColor = "black";
+   //          break;
+   //       case "blue":
+   //          body.style.backgroundColor = "blue";
+   //          canvas.style.backgroundColor = "black";
+   //          break;
+   //       case "yellow":
+   //          body.style.backgroundColor = "yellow";
+   //          canvas.style.backgroundColor = "black";
+   //          break;
+   //  }
+})
+})
+
+console.log(bigB)
+    </script>
+</body>
+</html>

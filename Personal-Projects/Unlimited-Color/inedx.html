@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Color</title>
+    <style>
+    body{
+        background-color: black;
+        color: white;
+        justify-content:center;
+        align-items: center;
+        display: flex;
+    }
+    #dibba{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #stop{
+        padding: 2%;
+        width: 30%;
+        border-radius: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+        font-size: larger;
+        box-shadow: 3px 4px  10px red;
+    }
+    #start{
+        padding: 2%;
+        width: 30%;
+        border-radius: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+        font-size: larger;
+        box-shadow: 3px 4px  10px red;
+    }
+</style>
+</head>
+<body>
+     <div id="dibba">  
+    <h1>Change Color of Background</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    </div>
+    <script>
+        const randomColor = function(){
+    const hex = "0123456789ABCDEF"
+    let color = '#'
+    for(let i=0;i<6;i++){
+        color=color+hex[Math.ceil(Math.random()*16)];
+    }
+    return color;
+}
+
+console.log(randomColor());
+
+let intervalId;
+
+const startChangeColor = function(){
+
+    function changeBgColor(){
+         document.body.style.backgroundColor = randomColor();
+    }
+    if(intervalId !== null){
+        intervalId = setInterval(changeBgColor,1000)
+    }
+   
+}
+
+const stopChangeColor = function(){
+
+    clearInterval(intervalId);
+    intervalId = null;
+}
+
+document.querySelector('#start').addEventListener('click',startChangeColor)
+
+document.querySelector('#stop').addEventListener('click',stopChangeColor)
+    </script>
+</body>
+</html>
