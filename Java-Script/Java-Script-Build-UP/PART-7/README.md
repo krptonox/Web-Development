@@ -86,3 +86,8 @@ Use:
 Arrays are structured, transformable data.
 You loop over them, transform them, filter them, or reduce them — all to control what shows up
 in your UI or logic.
+
+
+Shallow copy - Arrays who share same refernec and can be  manupilated by bringing change in any of the Array.
+
+Deep copy - Arry sin which change can not be broyght by changing in any of the Array.

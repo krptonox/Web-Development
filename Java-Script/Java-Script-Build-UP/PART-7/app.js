@@ -115,3 +115,13 @@ let arr = [1,2,3,3,4,5,5];
 
 let [a,b] = arr;
 
+const arr5 = new Array(5,4,3,2,1);
+console.log(arr5);
+
+const newArr = arr.join();
+console.log(newArr);
+console.log(typeof newArr);
+
+//============================Slice Method===========================================
+let newarr2 = arr.slice(0,4);
+console.log(newarr2);
