@@ -34,3 +34,5 @@ console.log(arr1); // [1, 2, 3]
 arr1.push(4);
 console.log(arr1);
 console.log(arr2); // [1, 2, 3, 4] because arr1 and arr2 reference the same array in heap
+
+

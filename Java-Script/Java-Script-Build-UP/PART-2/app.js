@@ -13,3 +13,4 @@ console.log(islog);
 
 console.log(typeof name);
 console.log(typeof null); // null is an object in js
+
