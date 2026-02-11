@@ -125,3 +125,22 @@ console.log(typeof newArr);
 //============================Slice Method===========================================
 let newarr2 = arr.slice(0,4);
 console.log(newarr2);
+
+const anotherArray = [1,2,3,[4,5,6],7,8,[,9,10,[12,23,24]]]
+
+console.log(anotherArray);
+
+const realAray = anotherArray.flat(Infinity);
+
+console.log(realAray);
+
+console.log(Array.from("Hello World"));  // it convert string into array of character
+
+console.log(Array.isArray(anotherArray));  // it check whether the given variable is array or not and it return true or false
+
+let sc1 = 100;
+let sc2 = 200;
+let sc3 = 300;
+let sc4 = 400
+
+console.log(Array.of(sc1,sc2,sc3,sc4));
